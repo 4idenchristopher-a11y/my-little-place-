@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>aideen's little space</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #C9E9E7;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      padding: 40px;
+      overflow-x: hidden;
+    }
+
+    .box {
+      background: white;
+      padding: 22px;
+      border-radius: 18px;
+      max-width: 330px;
+      margin: auto;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+      animation: floatIn 1.2s ease;
+      transition: 0.3s;
+    }
+
+    .box:hover {
+      transform: translateY(-4px);
+    }
+
+    @keyframes floatIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    img {
+      width: 220px;
+      border-radius: 20px;
+      margin-bottom: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      transition: 0.3s;
+    }
+
+    img:hover {
+      transform: scale(1.04);
+    }
+
+    h1 {
+      color: #6B7F7F;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    p {
+      font-size: 13px;
+      color: #6B7F7F;
+      line-height: 1.6;
+    }
+
+    .divider {
+      margin: 12px 0;
+      font-size: 12px;
+      opacity: 0.5;
+    }
+
+    .blink {
+      font-size: 11px;
+      opacity: 0.6;
+      margin-top: 10px;
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.8; }
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 12px;
+    }
+
+.ngl-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 9px 20px;
+  background: #C9E9E7;
+  color: #6B7F7F;
+  border-radius: 25px;
+  font-size: 12px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.ngl-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+    .float {
+      position: fixed;
+      bottom: -20px;
+      font-size: 16px;
+      opacity: 0.5;
+      animation: floatUp 7s linear infinite;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(0); }
+      to { transform: translateY(-120vh); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <img src="dino.jpg">
+
+    <!-- TYPING TEXT -->
+    <p id="typing-name"></p>
+    <p id="typing-desc"></p>
+
+    <div class="divider">──── ✿ ────</div>
+
+    <h1>hello there 💗</h1>
+
+    <p>
+      this is my little space,<br>
+      dibuat cuma buat fun & senang-senang 🌸
+    </p>
+
+    <p>
+      kadang suka diem,<br>
+      kadang rame sendiri,<br>
+      and that's okay 🤍
+    </p>
+
+    <audio controls>
+      <source src="test.mp3" type="audio/mpeg">
+    </audio>
+    
+    <div class="divider">──── say something ────</div>
+
+<p style="font-size:11px; opacity:0.7;">
+  kamu bisa ninggalin pesan anonim buat aku 🤍
+</p>
+
+<a href="https://ngl.link/41deen" target="_blank" class="ngl-btn">
+  💭 leave a soft message
+</a>
+
+<p style="font-size:10px; opacity:0.5; margin-top:6px;">
+  anonymous & safe ☁️
+</p>
+
+    <p class="blink">⋆｡˚ welcome to my tiny world ✨</p>
+    <p style="font-size:11px; opacity:0.6;">
+      currently healing & breathing ☁️
+    </p>
+  </div>
+
+  <!-- floating emojis -->
+  <div class="float" style="left:15%;">🌸</div>
+  <div class="float" style="left:45%;">✨</div>
+  <div class="float" style="left:75%;">🤍</div>
+
+  <!-- typing script -->
+  <script>
+    const text1 = "🌷 hi, i'm aideen";
+    const text2 = "just a random soul wandering on the internet ✨";
+
+    let i = 0;
+    let j = 0;
+
+    const typingName = document.getElementById("typing-name");
+    const typingDesc = document.getElementById("typing-desc");
+
+    function typeName() {
+      if (i < text1.length) {
+        typingName.innerHTML += text1.charAt(i);
+        i++;
+        setTimeout(typeName, 80);
+      } else {
+        setTimeout(typeDesc, 400);
+      }
+    }
+
+    function typeDesc() {
+      if (j < text2.length) {
+        typingDesc.innerHTML += text2.charAt(j);
+        j++;
+        setTimeout(typeDesc, 60);
+      }
+    }
+
+    typeName();
+  </script>
+
+</body>
+</html>
